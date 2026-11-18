@@ -1,0 +1,16 @@
+resources:
+  jobs:
+    orders_incremental_pipeline:
+      name: orders_incremental_pipeline
+      tasks:
+        - task_key: process_orders
+          notebook_task:
+            notebook_path: ${workspace.file_path}/notebooks/17_orders_job_runner.py
+            base_parameters:
+              source_file: orders_batch_1.csv
+            source: WORKSPACE
+          min_retry_interval_millis: 900000
+          disable_auto_optimization: true
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZED

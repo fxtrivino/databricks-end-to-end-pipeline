@@ -1,0 +1,16 @@
+resources:
+  jobs:
+    payments_incremental_pipeline:
+      name: payments_incremental_pipeline
+      tasks:
+        - task_key: process_payments
+          notebook_task:
+            notebook_path: ${workspace.file_path}/notebooks/19_payments_job_runner.py
+            base_parameters:
+              source_file: payments_batch_1.csv
+            source: WORKSPACE
+          min_retry_interval_millis: 900000
+          disable_auto_optimization: true
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZED

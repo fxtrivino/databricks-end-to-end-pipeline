@@ -1,0 +1,4 @@
+customer_id,name,email,country,updated_at
+921,Customer Test 921,test921@example.com,Argentina,2026-11-17 11:00:00
+922,Customer Test 922,test922@example.com,Chile,2026-11-17 11:05:00
+923,Customer Test 923,invalid-email,Colombia,2026-11-17 11:10:00

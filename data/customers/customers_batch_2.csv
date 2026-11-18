@@ -1,0 +1,4 @@
+customer_id,name,email,country,updated_at
+2,Carlos,carlos@example.com,Paraguay,2026-11-16 10:00:00
+6,Sofia,sofia@example.com,Argentina,2026-11-16 10:05:00
+7,Mateo,mateo@example.com,Chile,2026-11-16 10:10:00

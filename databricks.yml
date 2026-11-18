@@ -1,0 +1,8 @@
+bundle:
+  name: databricks-end-to-end-pipeline
+
+include:
+  - resources/*.yml
+
+# Configuración de ejemplo para Databricks Asset Bundles.
+# Requiere validación y despliegue en un workspace de destino.

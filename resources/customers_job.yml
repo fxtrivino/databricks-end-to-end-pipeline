@@ -1,0 +1,17 @@
+resources:
+  jobs:
+    customers_incremental_pipeline:
+      name: customers_incremental_pipeline
+      tasks:
+        - task_key: process_customers
+          notebook_task:
+            notebook_path: ${workspace.file_path}/notebooks/15_customers_job_runner.py
+            base_parameters:
+              source_file: customers_batch_7.csv
+              lease_minutes: "60"
+            source: WORKSPACE
+          min_retry_interval_millis: 900000
+          disable_auto_optimization: true
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZED
